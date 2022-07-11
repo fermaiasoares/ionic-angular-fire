@@ -1,0 +1,28 @@
+div.container {
+  background-color: #fff;
+
+  border-radius: .4em;
+  border-width: .1em;
+  border-style: solid;
+  border-color: #fff;
+
+  display: flex;
+
+  width: 80vw;
+  padding: .2em 0;
+
+  font-size: 1.2em !important;
+
+  &:hover {
+    border-color: var(--ion-color-primary);
+    transition: .5s border-color;
+  }
+
+  &.invalid  {
+    border-color: var(--ion-color-danger) !important;
+    border-width: 0.15rem !important;
+    border-style: solid !important;
+
+    color: var(--ion-color-danger) !important;
+  }
+}

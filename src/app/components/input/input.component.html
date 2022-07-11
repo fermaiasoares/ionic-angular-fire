@@ -1,0 +1,6 @@
+<div class="input-wrapper">
+    <ion-label *ngIf="!!label">{{label}} <ion-text color="danger" *ngIf="required">*</ion-text></ion-label>
+    <div class="container" [class.invalid]="isInvalid">
+        <ng-content></ng-content>
+    </div>
+</div>

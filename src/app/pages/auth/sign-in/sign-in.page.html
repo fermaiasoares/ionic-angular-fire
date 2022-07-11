@@ -1,0 +1,31 @@
+<ion-content>
+    <div class="container">
+        <img src="https://images.unsplash.com/photo-1522139137660-4248e04955b8" alt="Logo Image">
+        <h2>Entre com sua conta</h2>
+
+        <form [formGroup]="formData" (ngSubmit)="onSubmit($event)">
+            <app-input [isInvalid]="!formData.controls.email.valid && !!auth.email"
+                label="E-mail"
+                required="true"
+            >
+                <ion-input formControlName="email" placeholder="Digite seu email"></ion-input>
+            </app-input>
+
+            <app-input [isInvalid]="!formData.controls.password.valid && !!auth.password"
+                label="Senha"
+                required="true"
+            >
+                <ion-input  formControlName="password" type="password" placeholder="Digite sua senha">
+                </ion-input>
+            </app-input>
+
+            <ion-button type="submit" expand="block">Acessar</ion-button>
+
+            <a>Esqueci minha senha</a>
+        </form>
+
+        <span>ou</span>
+
+        <ion-button type="button" fill="clear" expand="block">Crie uma conta</ion-button>
+    </div>
+</ion-content>
